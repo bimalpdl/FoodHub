@@ -1,10 +1,10 @@
 
-Project Guidelines
-Introduction
+Project Guidelines <br>
+<b>Introduction</b>
 Welcome to our project! To facilitate efficient collaboration and minimize merge conflicts, we adhere to the following guidelines:
 
-Semantics Rules
-Code Style:
+<h2>Semantics Rules</h2>
+<h2>Code Style:</h2>
 
 Follow the project's coding style for consistency. Refer to the style guide for details.
 Comments:
