@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHub</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        /* navigation bar starts here */
+
+        .front-container{
+            width: 100%;
+            background-image: url('./images/momos.jpg');
+            height: 1700px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        
+        .container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            background-color: rgba(7, 7, 7, 0.663);
+            position: sticky;
+
+        }
+        a{
+            text-decoration: none;
+
+        }
+        .child{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .child ul li, .child ul li a{
+            display: inline-block;
+        font-size: 1.5rem;
+        padding-right: 22px;
+        color: #fff;
+    }
+
+    .child ul li:hover, .child ul li a:hover{
+        color: rgba(246, 164, 12, 0.868);
+    }
+
+        li a{
+            text-decoration: none;
+        }
+
+        .navbtn p a{
+            font-size: 1.5rem;
+            font-weight: 550;
+            color: #fff;
+            border: 1px solid cornsilk;
+            background-color: rgba(192, 16, 16, 0.827);
+            border-radius: 7px;
+            padding: 7px 13px;
+        }
+
+        .navbtn p a:hover{
+            padding: 5.5px 12px;
+            filter: drop-shadow(3px 3px 5px #bd9d9d);
+
+        }
+
+        /* Logo  */
+        
+        #logo a{
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.88rem;
+        }
+
+        #logo a:hover{
+            color: rgb(245, 181, 62);
+            filter: drop-shadow(1px 1px 2px #bd9d9d);
+        }
+
+        /* navigation bar ends here */
+
+        /* first page front view starts here  */
+        .fp-container{
+            position: relative;
+            top: 100px;
+        }
+        .slogan{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 3.5rem;
+            position: relative;
+            top: 100px;
+            left: 100px;
+            font-weight: 600;
+            color: black;
+            display: block;
+        }
+
+         .search-child{
+            display: inline-block;
+            position: relative;
+            top: 120px;
+            left: 90px;
+            padding: 15px;
+        }
+        .search-child input[type="text"]{
+            padding: 7px 35px 10px 25px;
+            font-size: 1.2rem;
+            border-radius: 18px;
+            background-color:#545556;
+            color: #fff;
+        }
+        
+        /* search button ~  front page */
+        .search-child input[type="button"]{
+            padding: 12px 12px;
+            border-radius: 15px;
+            color: #fff;
+            background-color: #545556;
+            border-radius:20px ;
+            font-size: 1.2rem;
+        }
+
+        .search-child input[type="button"]:hover{
+            cursor: pointer;
+            padding: 12px 12px;
+            border-radius: 18px;
+            color: #f4c89d;
+            background-color: rgba(19, 19, 19, 0.655);
+            font-size: 1.2rem;
+        }
+
+        /* schedule option- front page  */
+        #del-schedule{
+            padding: 7px 30px 10px 25px;
+            font-size: 1.2rem;
+            border-radius: 18px;
+            background-color: #545556;
+            color: #fff;
+        }
+
+        #del-schedule:hover{
+            filter: drop-shadow(1px 1px 1px #dad7d7);
+
+
+        }
+
+        /* sign in/ register option  */
+        #register {
+            position: relative;
+            top:120px;
+            left: 110px;
+            font-size: 1.2rem;
+        }
+        
+        #register a:hover{
+            color:rgba(169, 11, 231, 0.964);
+            text-decoration: underline;
+        }
+
+        /* Footer starts from here  */
+        .foot p{
+            text-align: center;
+            font-size: larger;
+            font-weight: 550;
+            position: relative;
+            bottom: 25;
+            color: rgba(128, 0, 128, 0.796);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation bar starts here  -->
+    <nav>
+        <div class="front-container">
+    <div class="container">
+        <div class="child" id="logo"><a href="#">FoodHub</a></div>
+        <div class="child">
+            <div class="topchild"> <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="Documents/ProjectNiroj/Web-Project/Contactus.html">Contact</a></li>
+            </ul>
+            </div>
+            <div class="navbtn"><p><a href="">Book A Table</a></p></div>
+        </div>
+    </div>
+
+
+    <!-- front page contents starts from here -->
+    <section>
+        <div class="fp-container">
+        <div class="slogan"><p>Food delivery near you</p></div>
+        <div class="search-container">
+            <div class="search-child">
+                <input type="text" placeholder="Enter your Address">
+            </div>
+            <div class="search-child">
+                <select name="del-schedule" id="del-schedule">
+                    <option value="Delivery Now" selected >Delivery Now</option>
+                    <option value="Schedule for Later">Schedule For Later</option>
+                </select>
+            </div>
+            <div class="search-child">
+                <input type="button" value="Search here" class="search-btn">
+            </div>
+            <div id="register">
+            <p>Or  <a href="#"> Sign in</a></p>
+            </div>
+        </div>
+
+    </div>
+    </section>
+</div>
+</nav>
+
+    <!-- Navigation bar ends here  -->
+    <main>
+        <section></section>
+    </main>
+  
+<footer>
+    <div class="foot">
+        <p>
+            &copy; 2023 copy right reserved. --FoodHub--
+        </p>
+    </div>
+</footer>
+</body>
+</html>
