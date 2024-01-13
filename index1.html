@@ -7,6 +7,7 @@
     <style>
         body{
             margin: 0;
+            /* overflow: hidden; */
         }
         *{
             margin: 0px;
@@ -19,7 +20,7 @@
         .front-container{
             width: 100%;
             background-image: url('./images/momos.jpg');
-            height: 1700px;
+            height: 1100px;
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -87,6 +88,28 @@
             filter: drop-shadow(1px 1px 2px #bd9d9d);
         }
 
+
+        /* media query for navigation bar  */
+        @media screen and (width <= 450px) {            
+            .container{
+                height: 55px;
+            }
+             
+            #logo a{
+                font-size: 0.6rem;;
+            }
+
+            .child ul li, .child ul li a{
+        font-size: 0.6rem;
+        padding-right: 4px;
+    }
+
+    .navbtn p a{
+            font-size: 0.6rem;
+            padding: 3px 5px;
+        }
+    }
+
         /* navigation bar ends here */
 
         /* first page front view starts here  */
@@ -101,7 +124,7 @@
             top: 100px;
             left: 100px;
             font-weight: 600;
-            color: rgba(0, 0, 0, 0.837);
+            color: rgba(0, 0, 0, 0.8N37);
             display: block;
         }
 
