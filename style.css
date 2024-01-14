@@ -332,7 +332,16 @@ padding-right: 4px;
     height:200px;
     background-size: cover;
     background-position: center;
+    transition: 0.5s;
+    background-color: #7d7e8088;
+    background-blend-mode: soft-light;
+}
 
+.fr-image:hover{
+    cursor: pointer;
+    background-blend-mode: normal;
+    transform: scale(1.08);
+    border-radius: 10px;
 }
 
 .fr-name{
