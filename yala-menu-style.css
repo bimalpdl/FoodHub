@@ -5,8 +5,8 @@
 
 }
 :root{
-    --hover-color: #f6a40cdd;
-    --text-color:#212020e5;
+    --hover-color: rgba(245, 164, 13, 0.867);
+    --text-color:hsla(0, 2%, 13%, 0.898);
 }
 
 /* navigation bar starts here */
