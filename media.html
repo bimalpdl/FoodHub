@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/logo-color.png">
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* navigation bar starts here */
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(7, 7, 7, 0.863);
+    position: sticky;
+
+}
+a{
+    text-decoration: none;
+
+}
+.child{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.child ul li, .child ul li a{
+    display: inline-block;
+font-size: 1.5rem;
+padding-right: 22px;
+color: #fff;
+}
+
+.child ul li:hover, .child ul li a:hover{
+color: rgba(246, 164, 12, 0.868);
+}
+
+li a{
+    text-decoration: none;
+}
+
+.navbtn p a{
+    font-size: 1.5rem;
+    font-weight: 550;
+    color: #fff;
+    border: 1px solid cornsilk;
+    background-color: rgba(192, 16, 16, 0.827);
+    border-radius: 7%;
+    padding: 7px 13px;
+}
+
+.navbtn p a:hover{
+    padding: 5.5px 11px;
+    filter: drop-shadow(3px 3px 5px #bd9d9d);
+
+}
+#logo a{
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.78rem;
+}
+
+#logo a:hover{
+    color: #f5b53e;
+    filter: drop-shadow(1px 1px 2px #bd9d9d);
+}
+
+ /* media query for navigation bar  */
+ @media screen and (width <= 450px) {            
+    .container{
+        height: 55px;
+    }
+     
+    #logo a{
+        font-size: 0.6rem;;
+    }
+
+    .child ul li, .child ul li a{
+font-size: 0.6rem;
+padding-right: 4px;
+}
+
+.navbtn p a{
+    font-size: 0.6rem;
+    padding: 3px 5px;
+}
+}
+
+/* navigation bar ends here */
+
+.master-container{
+    /* image from https://www.bossafish.com/  */
+    background-image: url('/images/top-banner.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1000px;
+}
+
+.front-container{
+    /* border: 2px solid red; */
+    width: 80%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 200px;
+    left: 50px;
+}
+.slogan{
+    /* border: 1px solid green; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: rgba(31, 29, 29, 0.874);
+
+}
+
+
+
+/* .search-container{
+    border: 1px solid maroon;
+    
+} */
+
+.search-child{
+    display: inline-block;
+    padding: 15px 15px 15px 0px;
+    margin: 7px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+.search-child input[type="text"]{
+    padding: 7px 35px 10px 15px;
+    font-size: 1.2rem;
+    border-radius: 18px;
+    background-color:#545556;
+    color: #fff;
+}
+
+/* search button ~  front page */
+.search-child input[type="button"]{
+    padding: 12px 12px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #545556;
+    border-radius:20px ;
+    font-size: 1.2rem;
+}
+
+.search-child input[type="button"]:hover{
+    cursor: pointer;
+    padding: 12px 12px;
+    border-radius: 18px;
+    color: #f4c89d;
+    background-color: rgba(19, 19, 19, 0.655);
+    font-size: 1.2rem;
+}
+
+/* schedule option- front page  */
+#del-schedule{
+    padding: 7px 30px 10px 25px;
+    font-size: 1.2rem;
+    border-radius: 18px;
+    background-color: #545556;
+    color: #fff;
+}
+
+#del-schedule:hover{
+    filter: drop-shadow(1px 1px 1px #dad7d7);
+}
+
+#register {
+    font-size: 1.2rem;
+    position: relative;
+    left: 10px;
+}
+
+#register a:hover{
+    color:#f5b53e;
+    text-decoration: underline;
+}
+
+/* Fornt content ends here  */
+
+.quote-container{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin: 70px 0px;
+
+}
+
+
+#quote{
+    font-style: italic;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 10px;
+
+}
+
+/* Introduction section starts here  */
+.intro-wrapper{
+     width: 100%;
+     height: 500px;
+     /* border: 2px solid red; */
+     display: flex;
+     align-items: center;
+
+}
+
+.intro-image{
+    width: 25%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid red; */
+    position: relative;
+    left: 10px;
+}
+
+.intro-container{
+    /* border: 3px solid green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 35px;
+    width: 70%;
+    height: 500px;
+}
+
+.intro-header{
+    /* border: 3px solid black; */
+    margin-top: 15PX;
+    width:90%;
+    height :145px;
+    font-size: 2.1rem;
+    text-align: left;
+    font-weight: 300;
+    padding:35px 20px;
+    color: black;
+}
+
+.intro-description{
+        /* border: 3px solid black; */
+        width:85%;
+        height:225px;
+        font-size: 1.2rem;  
+        line-height: 1.8;
+        word-spacing: 0.8px;
+        color: rgb(100, 97, 97);
+}
+
+.intro-btn{
+
+        /* border: 3px solid black; */
+        padding: 12px;
+        width:85%;
+        height:75px;
+        
+}
+
+#intro-btn{
+    padding: 12px;
+    /* padding-top: 0px; */
+    border-radius: 15px;
+    color: #fff;
+    background-color: #545556;
+    border-radius:9px ;
+    font-size: 1.5rem;
+    position: relative;
+    left: 0px;
+    cursor: pointer;
+}
+
+#intro-btn:hover{
+    padding: 11px 11px;
+    filter: drop-shadow(3px 3px 5px #bd9d9d);
+
+}
+
+
+/* featured restaurants front page starts here  */
+.frtop{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.fr-view-all p  a{
+    text-decoration:none ;
+    color: rgb(56, 227, 56);
+    font-size: 1.2rem;
+}
+
+.fr-view-all p  a:hover{
+    color: #f5b53e;
+
+}
+
+
+.fr{
+    font-size: 1.2rem;
+}
+
+.fr-container{
+    /* border: 3px solid red; */
+    display: grid;
+    row-gap:45px ;
+    column-gap: 5px;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 220px;
+    padding: 0px 75px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.fr-child{
+    /* border:3px solid green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.fr-image{
+    /* border: 2px solid purple; */
+    width: 80%;
+    height:200px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+    background-color: #7d7e8088;
+    background-blend-mode: soft-light;
+}
+
+.fr-image:hover{
+    cursor: pointer;
+    background-blend-mode: normal;
+    transform: scale(1.08);
+    border-radius: 10px;
+}
+
+.fr-name{
+    /* border: 2px solid yellow; */
+    width: 90%;
+    height: 55px;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    padding: 10px 0px;
+}
+.fr-name p a{
+    color: #545556;
+    padding: 10px 0px;
+}
+.fr-name p a:hover{
+    color: #f5b53e;
+}
+  
+
+
+
+
+
+
+
+
+/* footer starts from here  */
+.foot p{
+    text-align: center;
+    font-size: larger;
+    font-weight: 550;
+    position: relative;
+    bottom: 25;
+    color: rgba(128, 0, 128, 0.796);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* chatgpt media query  */
+
+/* media query for navigation bar */
+@media screen and (max-width: 450px) {
+    .container {
+        height: 55px;
+    }
+
+    #logo a {
+        font-size: 1rem;
+    }
+
+    .child ul li,
+    .child ul li a {
+        font-size: 1rem;
+        padding-right: 4px;
+    }
+
+    .navbtn p a {
+        font-size: 1rem;
+        padding: 3px 5px;
+    }
+}
+
+/* media query for front container */
+@media screen and (max-width: 450px) {
+    .front-container {
+        width: 90%;
+        top: 100px;
+        left: 10px;
+    }
+
+    .slogan {
+        font-size: 2rem;
+    }
+
+    .search-child input[type="text"] {
+        padding: 7px 20px 10px 10px;
+        font-size: 1rem;
+    }
+
+    .search-child input[type="button"] {
+        padding: 10px 10px;
+        border-radius: 15px;
+        font-size: 1rem;
+    }
+}
+
+/* media query for introduction section */
+@media screen and (max-width: 450px) {
+    .intro-wrapper {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-image {
+        width: 100%;
+        height: 300px;
+    }
+
+    .intro-container {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        text-align: center;
+    }
+
+    .intro-header {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    .intro-description {
+        font-size: 1rem;
+    }
+
+    .intro-btn {
+        padding: 10px;
+    }
+
+    #intro-btn {
+        font-size: 1.2rem;
+    }
+}
+
+/* media query for featured restaurants */
+@media screen and (max-width: 450px) {
+    .fr-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0px 15px;
+    }
+
+    .fr-child {
+        width: 100%;
+    }
+
+    .fr-image {
+        height: 150px;
+    }
+
+    .fr-name {
+        font-size: 1rem;
+    }
+}
+
+/* media query for footer */
+@media screen and (max-width: 450px) {
+    .foot p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+    <!-- Navigation bar starts here  -->
+    <nav>
+        <div class="master-container">
+    <div class="container">
+        <div class="child" id="logo"><a href="#">FoodHub</a></div>
+        <div class="child">
+            <div class="topchild"> <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#featured-restaurants">Service</a></li>
+                <li><a href="#introduction">About</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            </div>
+            <div class="navbtn"><p><a href="">Book A Table</a></p></div>
+        </div>
+    </div>
+
+
+
+    <!-- Navigation bar ends here  -->
+
+
+    <div class="front-container">
+        <div class="slogan">
+            <p>Food delivery near you</p>
+        </div>
+        <div class="search-container">
+            <div class="search-child">
+                <input type="text" placeholder="Enter your Address">
+            </div>
+            <div class="search-child">
+                <select name="del-schedule" id="del-schedule">
+                    <option value="Delivery Now" selected >Delivery Now</option>
+                    <option value="Schedule for Later">Schedule For Later</option>
+                </select>
+            </div>
+            <div class="search-child">
+                <input type="button" value="Search here" class="search-btn">
+            </div>
+            <div id="register">
+                <p>Or  <a href="#"> Sign in</a></p>
+                </div>
+    
+    </div>
+</div>
+</div>
+
+</nav>
+
+<!-- Front page quote   -->
+<section id="quote">
+<div class="quote-container">
+    <div class="quote-child1">
+        <p id="quote">
+            "Food is not rational. Food is culture, habit, craving, and identity."
+        </p>
+    </div>
+    <div class="quote-child2">
+        <p style="text-align: center; padding-bottom: 15px; font-size: 1.2rem;">-Jonathan Safran Foer</p>
+        </div>
+    </div>
+    
+</section>
+
+<!-- introduction starts from here  -->
+
+<section id="introduction">
+    <div class="intro-wrapper">
+        <div class="intro-image">
+            <img src="./images/food-delivery.jpg" alt="Intro Image" width="450px" height="250px">
+        </div>
+        <div class="intro-container">
+            <div class="intro-header">
+                <p>FoodHub: Bringing Culinary Delights to Your Doorstep, Where Every Bite Is a Journey!</p>
+            </div>
+            <div class="intro-description">
+                <p>
+Meet FoodHub, your gastronomic ally, now delighting taste buds across major cities in Nepal! We're your go-to for a diverse culinary journey, delivering mouthwatering meals straight to your doorstep. From traditional Nepali flavors to international delights, our menu caters to all tastes. Experience the convenience of swift, efficient food delivery, and elevate your dining moments with FoodHub. Join us in redefining the joy of home dining—one scrumptious delivery at a time!
+                </p>
+            </div>
+            <div class="intro-btn">
+                <input type="button" id="intro-btn" value="Contact us">
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr color="gray" size="0.5px">
+
+
+<!-- intro ends here  -->
+
+<!-- Featured Restaurants starts here  -->
+
+<section id="featured-restaurants">
+    <div class="frtop">
+        <div class="fr">
+            <p>Featured Restaurants</p>
+        </div>
+        <div class="fr-view-all">
+            <p><a href="#">View all</a></p>
+        </div>
+    </div>
+
+    <div class="fr-container">
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/pizza-full.jpg);"></div>
+            <div class="fr-name">
+                <p><a href="yala-menu.html">Yala Cafe</a></p>
+            </div>
+    </div>
+
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/sweet-food.jpg);"></div>
+            <div class="fr-name">
+                <p><a href="#">Dhokaima Cafe</a></p>
+            </div>
+    </div>
+
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/burger.jpg);"></div>
+            <div class="fr-name">
+                <P><a href="">Burger House and crunchy fried chicken</a></P>
+            </div>
+    </div>
+
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/momo-center.jpg);"></div>
+            <div class="fr-name">
+                <p><a href="">Thamel Momo Hut</a></p>
+            </div>
+    </div>
+
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/momos.jpg);"></div>
+            <div class="fr-name">
+                <p><a href="#">Aangan</a></p>
+            </div>
+    </div>
+
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/food-bg.jpg);"></div>
+            <div class="fr-name">
+                <p><a href="#">Bajeko Sekuwa</a></p>
+            </div>
+    </div>
+
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/food1.jpg);"></div>
+            <div class="fr-name">
+                <p><a href="#">Walnut Bistro</a></p>
+            </div>
+    </div>
+
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/food2.jpg);"></div>
+            <div class="fr-name">
+            <p><a href="#">Kathmandu Marriott</a></p>
+            </div>
+    </div>
+
+    </div>
+
+</section>
+
+
+
+
+    <footer>
+        <div class="foot">
+            <p>
+                &copy; 2023 copy right reserved. --FoodHub--
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

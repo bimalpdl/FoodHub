@@ -7,6 +7,399 @@
     <link rel="icon" href="./images/logo-color.png">
     <link rel="stylesheet" href="yala-menu-style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+:root{
+    --hover-color: rgba(245, 164, 13, 0.867);
+    --text-color:hsla(0, 2%, 13%, 0.898);
+}
+
+/* navigation bar starts here */
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(7, 7, 7, 0.863);
+    position: sticky;
+
+}
+a{
+    text-decoration: none;
+
+}
+.child{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.child ul li, .child ul li a{
+    display: inline-block;
+font-size: 1.5rem;
+padding-right: 22px;
+color: #fff;
+}
+
+.child ul li:hover, .child ul li a:hover{
+color: rgba(246, 164, 12, 0.868);
+}
+
+li a{
+    text-decoration: none;
+}
+
+.navbtn p a{
+    font-size: 1.5rem;
+    font-weight: 550;
+    color: #fff;
+    border: 1px solid cornsilk;
+    background-color: rgba(192, 16, 16, 0.827);
+    border-radius: 7%;
+    padding: 7px 13px;
+}
+
+.navbtn p a:hover{
+    padding: 5.5px 11px;
+    filter: drop-shadow(3px 3px 5px #bd9d9d);
+
+}
+#logo a{
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.78rem;
+}
+
+#logo a:hover{
+    color: rgb(245, 181, 62);
+    filter: drop-shadow(1px 1px 2px #bd9d9d);
+}
+
+/* media query for navigation bar  */
+@media screen and (width <= 450px) {            
+    .container{
+        height: 55px;
+    }
+     
+    #logo a{
+        font-size: 0.6rem;;
+    }
+
+    .child ul li, .child ul li a{
+font-size: 0.6rem;
+padding-right: 4px;
+}
+
+.navbtn p a{
+    font-size: 0.6rem;
+    padding: 3px 5px;
+}
+}
+
+/* navigation bar ends here */
+
+/* menu starts from here  */
+.menuf-container{
+    width: 100%;
+    height:450px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color:rgba(9, 8, 8, 0.74);
+    background-blend-mode: multiply;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menuf-container:hover{
+    background-color: rgba(9, 8, 8, 0.59);
+
+}
+.res-name{
+    /* border: 3px solid white; */
+    width: 80%;
+    height: 150px;
+    position: relative;
+    /* bottom: 25px; */
+    top:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+
+.res-name p{
+    font-size: 3rem;
+    color: white;
+}
+.res-address{
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.768);
+
+}
+
+/* .menuf-container ends here  */
+
+.semi-nav{
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu-con p a, .menu-about p a{
+    color: var(--text-color);
+    padding: 25px;
+    font-size: 1.2rem;
+}
+
+.menu-con p a:hover, .menu-about p a:hover{
+    color:var(--hover-color);
+}
+
+/* actual menu starts here  */
+.menu-wrapper{
+    /* border: 2px solid red; */
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    left: 75px;
+    top: 45px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.menu-title ul li{
+    list-style: none;
+    padding: 4px 0px;
+}
+.menu-title ul li a{
+    color: var(--text-color);
+    font-size: larger;
+}
+
+.menu-title ul li a:hover{
+    color: var(--hover-color);
+}
+
+.menu-title{
+    position: relative;
+    top: 45px;
+    /* border: 2px solid green; */
+    padding: 7px 0px;
+    flex-basis: 15%;
+
+}
+
+.menu-detail{
+    display: flex;
+    flex-basis: 70%;
+    /* border: 2px solid red; */
+    flex-direction: column;
+    column-gap: 105px;
+    row-gap: 5px;
+    position: relative;
+    left:55px;
+}
+
+.product-header{
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 35px;
+    font-size: 2rem;
+    color: #5c5b5b;
+    text-align: center;
+    background-color: rgba(167, 165, 165, 0.163);
+    margin-bottom: 15px;
+}
+
+.about-product{
+    /* border: 1px solid rgb(214, 194, 38); */
+    width: 100%;
+    height: 35px;
+    display: flex;
+}
+.about-product:hover{
+    border-bottom: 0.5px solid rgba(189, 184, 184, 0.366);
+}
+
+.product-description:hover{
+        background-color: rgba(203, 201, 201, 0.152);
+ }
+
+.product-description{
+    /* border: 1px solid rgb(0, 255, 51); */
+    width: 100%;
+    height: 35px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.product-name{
+    flex-basis: 80%;
+    /* border: 1px solid red; */
+    color:gray;
+    font-size: 1.5rem;
+}
+
+.product-name p a {
+    color: var(--text-color);
+
+}
+
+.product-name p a:hover{
+    color: var(--hover-color);
+
+}
+
+
+
+
+.product-price{
+    flex-basis: 15%;
+    /* border: 1px solid rgb(187, 155, 41); */
+    color: green;
+}
+
+.add-cart{
+    flex-basis: 5%;
+    /* border: 1px solid rgb(41, 51, 187); */
+    align-items: center;
+    color: #212020e5;
+}
+
+.add-cart a{
+    color: #212020e5;
+}
+
+.add-cart a:hover{
+    color: var(--hover-color);
+}
+
+
+#foot{
+    text-align: center;
+
+}
+
+
+
+
+/* chatgpt media query  */
+
+/* media query for navigation bar and general styling adjustments */
+@media only screen and (max-width: 1440px) {
+    .container {
+        height: 70px;
+    }
+
+    .child ul li,
+    .child ul li a {
+        font-size: 1.2rem;
+        padding-right: 18px;
+    }
+
+    .navbtn p a {
+        font-size: 1.2rem;
+        padding: 6px 12px;
+    }
+
+    #logo a {
+        font-size: 1.5rem;
+    }
+
+    .menu-wrapper {
+        left: 20px;
+    }
+
+    .menu-detail {
+        column-gap: 30px;
+        row-gap: 5px;
+        left: 20px;
+    }
+
+    .product-name {
+        font-size: 1.2rem;
+    }
+
+    .product-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* media query for navigation bar on smaller screens like Samsung Galaxy S20 Ultra */
+@media only screen and (max-width: 1440px) {
+    .container {
+        height: 60px;
+    }
+
+    #logo a {
+        font-size: 1.3rem;
+    }
+
+    .child ul li,
+    .child ul li a {
+        font-size: 1rem;
+        padding-right: 14px;
+    }
+
+    .navbtn p a {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+}
+
+/* media query for menu container on smaller screens */
+@media only screen and (max-width: 1440px) {
+    .menuf-container {
+        height: 400px;
+    }
+
+    .res-name p {
+        font-size: 2.5rem;
+    }
+
+    .res-address {
+        font-size: 1.3rem;
+    }
+}
+
+/* media query for semi-nav on smaller screens */
+@media only screen and (max-width: 1440px) {
+    .semi-nav {
+        height: 80px;
+    }
+
+    .menu-con p a,
+    .menu-about p a {
+        font-size: 1rem;
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+    </style>
 </head>
 <body>
     <!-- Navigation bar starts here  -->
@@ -42,10 +435,10 @@
 
 <div class="semi-nav">
     <div class="menu-con">
-        <p><a href="yala-menu.html">Menu</a></p>
+        <p><a href="#">Menu</a></p>
     </div>
    <div class="menu-about">
-    <p><a href="yala-about.html">About</a></p>
+    <p><a href="#">About</a></p>
 </div>
 </div>
 <br>
