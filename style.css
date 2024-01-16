@@ -90,7 +90,7 @@ padding-right: 4px;
 
 .master-container{
     /* image from https://www.bossafish.com/  */
-    background-image: url('/images/top-banner.jpg');
+    background-image: url('images/top-banner.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
