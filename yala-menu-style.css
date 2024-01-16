@@ -150,13 +150,13 @@ padding-right: 4px;
     width: 75%;
     align-items: center;
     /* justify-content: center; */
-    margin: 150px;
+    margin: 100px;
 }
 
 .about-heading{
     /* border:2px solid green; */
     flex-basis: 35%;
-    padding: 75px 0px 45px 0px;
+    padding: 0px 0px 45px 0px;
     font-size: 1.2rem;
 }
 
