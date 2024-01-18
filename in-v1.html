@@ -4,228 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="./images/logo-color.png">
+
     <style>
-        body{
-            margin: 0;
-            /* overflow: hidden; */
-        }
-        *{
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
 
-        /* navigation bar starts here */
-
-        .front-container{
-            width: 100%;
-            background-image: url('./images/momos.jpg');
-            height: 1100px;
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
         
-        .container{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 100%;
-            height: 100px;
-            background-color: rgba(7, 7, 7, 0.663);
-            position: sticky;
-
-        }
-        a{
-            text-decoration: none;
-
-        }
-        .child{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        .child ul li, .child ul li a{
-            display: inline-block;
-        font-size: 1.5rem;
-        padding-right: 22px;
-        color: #fff;
+    /* Container styles */
+    .foot-container {
+      max-width: 1170px;
+      margin: auto;
     }
 
-    .child ul li:hover, .child ul li a:hover{
-        color: rgba(246, 164, 12, 0.868);
+    /* Flexbox styles for the row of the footer content */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    ul {
+      list-style: none;
     }
 
-        li a{
-            text-decoration: none;
-        }
-
-        .navbtn p a{
-            font-size: 1.5rem;
-            font-weight: 550;
-            color: #fff;
-            border: 1px solid cornsilk;
-            background-color: rgba(192, 16, 16, 0.827);
-            border-radius: 7px;
-            padding: 7px 13px;
-        }
-
-        .navbtn p a:hover{
-            padding: 5.5px 12px;
-            filter: drop-shadow(3px 3px 5px #bd9d9d);
-
-        }
-
-        /* Logo  */
-        
-        #logo a{
-            color: #fff;
-            font-weight: 700;
-            font-size: 1.88rem;
-        }
-
-        #logo a:hover{
-            color: rgb(245, 181, 62);
-            filter: drop-shadow(1px 1px 2px #bd9d9d);
-        }
-
-
-        /* media query for navigation bar  */
-        @media screen and (width <= 450px) {            
-            .container{
-                height: 55px;
-            }
-             
-            #logo a{
-                font-size: 0.6rem;;
-            }
-
-            .child ul li, .child ul li a{
-        font-size: 0.6rem;
-        padding-right: 4px;
+    /* Footer section styles */
+    .footer-new {
+      background-color: #24262b;
+      padding: 70px 0;
     }
 
-    .navbtn p a{
-            font-size: 0.6rem;
-            padding: 3px 5px;
-        }
+    /* Individual column styles within the footer */
+    .footer-col {
+      width: 25%;
+      padding: 0 15px;
     }
 
-        /* navigation bar ends here */
+    /* Heading styles for each column */
+    .footer-col h4 {
+      font-size: 18px;
+      color: white;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
 
-        /* first page front view starts here  */
-        .fp-container{
-            position: relative;
-            top: 100px;
-        }
-        .slogan{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 3.5rem;
-            position: relative;
-            top: 100px;
-            left: 100px;
-            font-weight: 600;
-            color: rgba(0, 0, 0, 0.8N37);
-            display: block;
-        }
+    /* for the underline beneath the column headings */
+    .footer-col h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: orangered;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
 
-         .search-child{
-            display: inline-block;
-            position: relative;
-            top: 120px;
-            left: 90px;
-            padding: 15px;
-        }
-        .search-child input[type="text"]{
-            padding: 7px 35px 10px 25px;
-            font-size: 1.2rem;
-            border-radius: 18px;
-            background-color:#545556;
-            color: #fff;
-        }
-        
-        /* search button ~  front page */
-        .search-child input[type="button"]{
-            padding: 12px 12px;
-            border-radius: 15px;
-            color: #fff;
-            background-color: #545556;
-            border-radius:20px ;
-            font-size: 1.2rem;
-        }
+    /*for list items within columns */
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
 
-        .search-child input[type="button"]:hover{
-            cursor: pointer;
-            padding: 12px 12px;
-            border-radius: 18px;
-            color: #f4c89d;
-            background-color: rgba(19, 19, 19, 0.655);
-            font-size: 1.2rem;
-        }
+    /*for links within list items */
+    .footer-col ul li a {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: white;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+    }
 
-        /* schedule option- front page  */
-        #del-schedule{
-            padding: 7px 30px 10px 25px;
-            font-size: 1.2rem;
-            border-radius: 18px;
-            background-color: #545556;
-            color: #fff;
-        }
+    /* Hover effect for links */
+    .footer-col ul li a:hover {
+      color: white;
+      padding-left: 8px;
+    }
 
-        #del-schedule:hover{
-            filter: drop-shadow(1px 1px 1px #dad7d7);
+    /* for social links style */
+    .footer-col .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+    }
 
+    /* Hover effect for social links */
+    .footer-col .social-links a:hover {
+      color: blue;
+      background-color: #ffffff;
+    }
 
-        }
+    /*for the "Service Hours" column */
+    .button {
+      color: #bbbbbb;
+      margin: 2%;
+      padding-left: 40%;
+    }
 
-        /* sign in/ register option  */
-        #register {
-            position: relative;
-            top:120px;
-            left: 110px;
-            font-size: 1.2rem;
-        }
-        
-        #register a:hover{
-            color:rgba(169, 11, 231, 0.964);
-            text-decoration: underline;
-        }
+    /* Responsive Styles */
+    @media(max-width: 767px) {
+      .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+    }
 
-        /* Footer starts from here  */
-        .foot p{
-            text-align: center;
-            font-size: larger;
-            font-weight: 550;
-            position: relative;
-            bottom: 25;
-            color: rgba(128, 0, 128, 0.796);
-        }
-
+    @media(max-width: 574px) {
+      .footer-col {
+        width: 100%;
+      }
+    }
+    /*footer css end here*/
     </style>
 </head>
 <body>
     <!-- Navigation bar starts here  -->
     <nav>
-        <div class="front-container">
+        <div class="master-container">
     <div class="container">
-        <div class="child" id="logo"><a href="#">FoodHub</a></div>
+        <div class="child" id="logo"><a href="index.html">FoodHub</a></div>
         <div class="child">
             <div class="topchild"> <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="Documents/ProjectNiroj/Web-Project/Contactus.html">Contact</a></li>
+                <li><a href="#featured-restaurants">Service</a></li>
+                <li><a href="#introduction">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
             </ul>
             </div>
-            <div class="navbtn"><p><a href="">Book A Table</a></p></div>
+            <div class="navbtn"><p><a href="login-page.html">Book A Table</a></p></div>
         </div>
     </div>
 
 
-    <!-- front page contents starts from here -->
-    <section>
-        <div class="fp-container">
-        <div class="slogan"><p>Food delivery near you</p></div>
+
+    <!-- Navigation bar ends here  -->
+
+
+    <div class="front-container">
+        <div class="slogan">
+            <p>Food delivery near you</p>
+        </div>
         <div class="search-container">
             <div class="search-child">
                 <input type="text" placeholder="Enter your Address">
@@ -240,26 +169,199 @@
                 <input type="button" value="Search here" class="search-btn">
             </div>
             <div id="register">
-            <p>Or  <a href="#"> Sign in</a></p>
-            </div>
-        </div>
-
+                <p>Or  <a href="#"> Sign in</a></p>
+                </div>
+    
     </div>
-    </section>
 </div>
+</div>
+
 </nav>
 
-    <!-- Navigation bar ends here  -->
-    <main>
-        <section></section>
-    </main>
-  
-<footer>
-    <div class="foot">
-        <p>
-            &copy; 2023 copy right reserved. --FoodHub--
+<!-- Front page quote   -->
+<section id="quote">
+<div class="quote-container">
+    <div class="quote-child1">
+        <p id="quote">
+            "Food is not rational. Food is culture, habit, craving, and identity."
         </p>
     </div>
+    <div class="quote-child2">
+        <p style="text-align: center; padding-bottom: 15px; font-size: 1.2rem;">-Jonathan Safran Foer</p>
+        </div>
+    </div>
+    
+</section>
+
+<!-- introduction starts from here  -->
+
+<section id="introduction">
+    <div class="intro-wrapper">
+        <div class="intro-image">
+            <img src="./images/food-delivery.jpg" alt="Intro Image" width="450px" height="250px">
+        </div>
+        <div class="intro-container">
+            <div class="intro-header">
+                <p>FoodHub: Bringing Culinary Delights to Your Doorstep, Where Every Bite Is a Journey!</p>
+            </div>
+            <div class="intro-description">
+                <p>
+Meet FoodHub, your gastronomic ally, now delighting taste buds across major cities in Nepal! We're your go-to for a diverse culinary journey, delivering mouthwatering meals straight to your doorstep. From traditional Nepali flavors to international delights, our menu caters to all tastes. Experience the convenience of swift, efficient food delivery, and elevate your dining moments with FoodHub. Join us in redefining the joy of home dining—one scrumptious delivery at a time!
+                </p>
+            </div>
+            <div class="intro-btn">
+                <input type="button" id="intro-btn" value="Contact us">
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr color="gray" size="0.5px">
+
+
+<!-- intro ends here  -->
+
+<!-- Featured Restaurants starts here  -->
+
+<section id="featured-restaurants">
+    <div class="frtop">
+        <div class="fr">
+            <p>Featured Restaurants</p>
+        </div>
+        <div class="fr-view-all">
+            <p><a href="#">View all</a></p>
+        </div>
+    </div>
+
+    <div class="fr-container">
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/pizza-full.jpg);"></div>
+            <div class="fr-name">
+                <p><a href="yala-menu.html">Yala Cafe</a></p>
+            </div>
+    </div>
+
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/sweet-food.jpg);"></div>
+            <div class="fr-name">
+                <p><a href="dhokaima-menu.html">Dhokaima Cafe</a></p>
+            </div>
+    </div>
+
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/burger.jpg);"></div>
+            <div class="fr-name">
+                <P><a href="burger-house-menu.html">Burger House and crunchy fried chicken</a></P>
+            </div>
+    </div>
+
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/momo-center.jpg);"></div>
+            <div class="fr-name">
+                <p><a href="">Thamel Momo Hut</a></p>
+            </div>
+    </div>
+
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/momos.jpg);"></div>
+            <div class="fr-name">
+                <p><a href="aangan-menu.html">Aangan Sweets</a></p>
+            </div>
+    </div>
+
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/food-bg.jpg);"></div>
+            <div class="fr-name">
+                <p><a href="bajeko-menu.html">Bajeko Sekuwa</a></p>
+            </div>
+    </div>
+
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/food1.jpg);"></div>
+            <div class="fr-name">
+                <p><a href="walnut-menu.html">Walnut Bistro</a></p>
+            </div>
+    </div>
+
+        <div class="fr-child">
+            <div class="fr-image" style="background-image: url(./images/food2.jpg);"></div>
+            <div class="fr-name">
+            <p><a href="marriott-menu.html">Kathmandu Marriott</a></p>
+            </div>
+    </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+  
+<!--footer section start here-->
+<!-- Footer section-->
+<footer class="footer-new">
+<div class="foot-container">
+  <div class="row">
+    <!-- Column 1 - Quick links -->
+    <div class="footer-col">
+      <h4>Quick links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Team</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 2 - Contact Us -->
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><a href="#"><i class="fa fa-home"></i>TU Rd 14, Kathmandu</a></li>
+        <li><a href="#"><i class="fa fa-mobile-phone"></i>+977-9816069740, <br>+977-9843625929</a></li>
+        <li><a href="mailto:info@foodhub.com"><i class="fa fa-envelope"></i>info@foodhub.com</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 - Follow Us -->
+    <div class="footer-col">
+      <h4>follow us</h4>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Column 4 - Service Hours -->
+    <div class="footer-col">
+      <h4>Service Hours</h4>
+      <ul>
+        <li><a href="#">10:00 AM to 2:00 AM (NST)</a></li>
+      </ul>
+    </div>
+
+    <!-- for footer button-->
+    <div class="button">
+      <p>&copy; 2024 FoodHub . All rights reserved</p>
+    </div>
+  </div>
+</div>
 </footer>
+
+
+
+
+   
+    </footer>
 </body>
 </html>
