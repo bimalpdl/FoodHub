@@ -79,6 +79,74 @@
 
 
 
+
+
+
+
+         /* servies css starts here   */
+    
+    /*for the main heading*/
+    .heading{
+        text-align: center;
+        font-size: 40px;
+        color: rgba(255, 68, 0, 0.919);
+        margin-top:55px ;
+    }
+    /*for the subheading h2*/
+    .heading span p{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .s-box p{
+        font-size: 1.2rem;
+        margin-bottom: 45pxs;
+    }
+    .heading h2 {
+        color: black;
+    }
+    /*for the service container using CSS Grid*/
+    .service-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+        grid-gap: 1.5rem;
+        margin-top: 4rem;
+    }
+    /*for individual service boxes*/
+    .s-box {
+        border-radius: 0.5rem;
+        text-align: center;
+        padding: 15px 25px;
+        margin-bottom: 5rem;
+    }
+    /* for box images*/
+    .s-box img{
+        width: 90px; 
+    }
+    /* Styling for service box headings */
+    .s-box h3{
+        margin: 4px 0 10px;
+        color: black;
+        font-size: 1.2rem;
+    }
+    /*for service box paragraphs*/
+    .s-box p{
+        line-height: 1.7rem;
+    }
+    /* hover for service boxes*/
+    .s-box:hover {
+        background-color: skyblue;
+        box-shadow: gray;
+    }
+
+
+
+     /* servies css ends here   */
+
+
+    
+
+
 /* footer starts from here  */
 .foot p{
     text-align: center;
@@ -228,6 +296,43 @@
 </nav>
 
     <!-- Navigation bar ends here  -->
+
+
+
+
+
+    <!-- services starts here  -->
+    <section class="services" id="services">
+        <!-- Section for Services with a Heading -->
+        <div class="heading">
+            <span><p>Services</p></span>
+            <h2>We provide the best quality food</h2>
+        </div>
+        <!-- Container for Service Boxes -->
+        <div class="service-container">
+            <!-- Individual Service Box 1 -->
+            <div class="s-box">
+                <img src="images/s1.png">
+                <h3>Order</h3>
+                <p>Effortless Food Ordering, Extraordinary Dining</p>
+            </div>
+            <!-- Individual Service Box 2 -->
+            <div class="s-box">
+                <img src="images/s2.png">
+                <h3>Shipping</h3>
+                <p>Track Your Tastes with Our Speedy Shipping</p>
+            </div>
+            <!-- Individual Service Box 3 -->
+            <div class="s-box">
+                <img src="images/s3.png">
+                <h3>Delivered</h3>
+                <p>Fast Food, Faster Delivery</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- services ends here  -->
+   
    
     
 
