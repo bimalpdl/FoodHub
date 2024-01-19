@@ -375,7 +375,7 @@ padding-right: 4px;
     font-size: larger;
     font-weight: 550;
     position: relative;
-    bottom: 25;
+    bottom: 15;
     color: rgba(128, 0, 128, 0.796);
 }
 
@@ -399,13 +399,13 @@ padding-right: 4px;
       /* Footer section styles */
       .footer-new {
         background-color: #24262b;
-        padding: 70px 0;
+        padding: 35px 0px 0px 10px;
       }
   
       /* Individual column styles within the footer */
       .footer-col {
         width: 25%;
-        padding: 0 15px;
+        padding: 0px 15px;
       }
   
       /* Heading styles for each column */
@@ -413,7 +413,7 @@ padding-right: 4px;
         font-size: 18px;
         color: white;
         text-transform: capitalize;
-        margin-bottom: 35px;
+        margin-bottom: 20px;
         font-weight: 500;
         position: relative;
       }
