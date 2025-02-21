@@ -25,7 +25,7 @@
                 <li><a href="contact-us.html">Contact</a></li>
             </ul>
             </div>
-            <div class="navbtn"><p><a href="login-page.html">Book A Table</a></p></div>
+            <div class="navbtn"><p><a href="login-page.html">Place An Order</a></p></div>
         </div>
     </div>
 
@@ -52,7 +52,7 @@
                 <input type="button" value="Search here" class="search-btn">
             </div>
             <div id="register">
-                <p>Or  <a href="#"> Sign in</a></p>
+                <p>Or  <a href="login-page.html"> Sign in</a></p>
                 </div>
     
     </div>
@@ -93,7 +93,13 @@ Meet FoodHub, your gastronomic ally, now delighting taste buds across major citi
                 </p>
             </div>
             <div class="intro-btn">
-                <input type="button" id="intro-btn" value="Contact us">
+                <input type="button" id="intro-btn" value="Contact us" " >
+<script type="text/javascript">
+    document.getElementById("intro-btn").onclick = function () {
+        location.href = "contact-us.html";
+    };
+</script>
+
             </div>
         </div>
     </div>
